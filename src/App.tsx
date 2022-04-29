@@ -11,7 +11,7 @@ function App() {
         <AppBar position="fixed">
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              News
+              Enn
             </Typography>
             <IconButton
               size="large"
