@@ -1,13 +1,35 @@
 import React, { FC } from 'react';
+import { Box, createTheme, CssBaseline, ThemeProvider, Typography } from '@mui/material';
 
 export const Featured:FC =()=> {
 
+  const featureTheme = createTheme({
+    palette: {
+      primary: {
+        main: "#AFCECC",
+        light: "#AFCECC",
+        dark: "#1565c0",
+        contrastText: '#003b54',
+      },
+      background: {
+        default: '#AFCECC',
+      },
+      text: { primary: '#003b54' },
+    }
+  });
+
   return (
     <div>
-      <title>aaa</title>
-      <title>aaa</title>
-      <title>aaa</title>
-      <title>aaa</title>
+      <ThemeProvider theme={featureTheme}>
+        <CssBaseline />
+      <Box m={10}>
+        <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+          Featured
+        </Typography>
+      </Box>
+      </ThemeProvider>
+
+
     </div>
   );
 };

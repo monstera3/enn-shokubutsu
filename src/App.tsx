@@ -33,7 +33,7 @@ function App() {
     <ThemeProvider theme={sampleTheme}>
       <CssBaseline />
       <div className="App">
-        <Featured/>
+
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="fixed" >
             <Toolbar>
@@ -52,6 +52,7 @@ function App() {
 
             </Toolbar>
           </AppBar>
+          <Featured/>
           <ImgList/>
         </Box>
 
