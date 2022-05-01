@@ -7,12 +7,16 @@ export const Featured:FC =()=> {
 
   return (
     <div>
-      <Box m={10} style={{ backgroundColor: theme.palette.primary.light }}>
-        <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+      <Box pt={20} style={{ backgroundColor: theme.palette.primary.light}}>
+        <Typography  variant="h5" sx={{textAlign: 'center',fontWeight:'light'}}>
           Featured
         </Typography>
-        <div>INDOOR PLANTS</div>
-        <div>Monstera</div>
+        <Box sx={{  width:'35%',textAlign: 'right',py:5}}>
+          <Typography sx={{ fontSize: '0.1rem',fontWeight:'light'}}>INDOOR PLANTS</Typography>
+          <Box sx={{ borderTop:1, width:'100%'}}/>
+          <Typography variant="h5">Monstera</Typography>
+        </Box>
+        <img src="" alt=""/>
       </Box>
     </div>
   );
