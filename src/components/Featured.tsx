@@ -6,7 +6,7 @@ export const Featured:FC =()=> {
   const featureTheme = createTheme({
     palette: {
       primary: {
-        main: "#AFCECC",
+        main: "#fbf8f8",
         light: "#AFCECC",
         dark: "#1565c0",
         contrastText: '#003b54',
