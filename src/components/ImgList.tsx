@@ -38,6 +38,7 @@ export default function ImgList() {
     return <div>Loading...</div>;
   } else {
     return (
+      <Box>
       <ul>
         {items.map(item => (
           <li key={item.id}>
@@ -45,21 +46,14 @@ export default function ImgList() {
           </li>
         ))}
       </ul>
-    );
-  }
 
-
-
-  return (
-
-    <Box>
       <LogoImg/>
       <LogoImg/>
       <LogoImg/>
       <LogoImg/>
       <LogoImg/>
     </Box>
-
-  )
+    );
+  }
 
 }
