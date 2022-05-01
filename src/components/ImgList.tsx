@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 
 
 export default function ImgList() {
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<{ message: string } | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
