@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import LogoImg from './components/LogoImg';
+import ImgList from './components/ImgList';
 import {
   AppBar,
   Box,
@@ -50,14 +50,7 @@ function App() {
 
             </Toolbar>
           </AppBar>
-          <LogoImg/>
-          <Typography  component="div" >
-            Enn
-          </Typography>
-          <LogoImg/>
-          <LogoImg/>
-          <LogoImg/>
-          <LogoImg/>
+          <ImgList/>
         </Box>
 
       </div>
