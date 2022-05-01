@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import  ImgList  from './components/ImgList';
+import  ImgList,{ Item }  from './components/ImgList';
 import {
   AppBar,
   Box,
@@ -28,7 +28,7 @@ const sampleTheme = createTheme({
   }
 });
 
-function App() {
+const App = (props: {storedItems: Item[]})=> {
   return (
     <ThemeProvider theme={sampleTheme}>
       <CssBaseline />
@@ -53,12 +53,12 @@ function App() {
             </Toolbar>
           </AppBar>
           <Featured/>
-          <ImgList/>
+          <ImgList storedItems={props.storedItems}/>
         </Box>
 
       </div>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
