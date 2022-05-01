@@ -74,12 +74,6 @@ export default function ImgList() {
           )))
           }
         </ImageList>
-
-      <LogoImg/>
-      <LogoImg/>
-      <LogoImg/>
-      <LogoImg/>
-      <LogoImg/>
     </Box>
     );
   }
