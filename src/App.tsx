@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ImgList from './components/ImgList';
+import  ImgList  from './components/ImgList';
 import {
   AppBar,
   Box,
@@ -11,12 +11,13 @@ import {
   Typography
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Featured } from './components/Featured';
 
 const sampleTheme = createTheme({
   palette: {
     primary: {
       main: "#fbf8f8",
-      light: "#fbf8f8",
+      light: "#AFCECC",
       dark: "#1565c0",
       contrastText: '#003b54',
     },
@@ -32,6 +33,7 @@ function App() {
     <ThemeProvider theme={sampleTheme}>
       <CssBaseline />
       <div className="App">
+        <Featured/>
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="fixed" >
             <Toolbar>

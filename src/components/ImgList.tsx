@@ -1,4 +1,4 @@
-import LogoImg from './LogoImg';
+import { LogoImg } from './LogoImg';
 import React, { useEffect, useState } from 'react';
 import { Box, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import Config from '../config';
@@ -58,7 +58,7 @@ export default function ImgList() {
   } else {
     return (
       <Box>
-        <ImageList sx={{ width:'80%' }} cols={1}>
+        <ImageList sx={{ width:'80%' }} cols={1} >
           {items.map((item => (
             <ImageListItem key={item.id}>
               <img
