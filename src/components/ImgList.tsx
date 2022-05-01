@@ -32,30 +32,35 @@ export default function ImgList() {
           return;
         }
         setIsLoaded(true);
-        setItems(
-          response.data.map((post: any): Item => {
-            return {
-              id: post.id,
-              mediaUrl: post.media_url,
-              mediaType: post.media_type,
-              likeCount: post.like_count,
-              commentsCount: post.comments_count,
-              caption: post.caption
-            }
-          })
-        );
+        const items = response.data.map((post: any): Item => {
+          return {
+            id: post.id,
+            mediaUrl: post.media_url,
+            mediaType: post.media_type,
+            likeCount: post.like_count,
+            commentsCount: post.comments_count,
+            caption: post.caption
+          }
+        });
+        setItems(items);
+        updateStoredItems(items);
       }
     );
   }
-
+  const updateStoredItems = (updatedItems: Item[]) => {
+    localStorage.setItem('storedItems', JSON.stringify(updatedItems));
+  }
 
   // Note: the empty deps array [] means
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
     const hashMonsteraId = '17843684002004351'
-    setTimeout(()=> fetchPhotos(hashMonsteraId), 1000)
-
+    if (items.length === 0) {
+      setTimeout(()=> fetchPhotos(hashMonsteraId), 1000);
+    } else {
+      setIsLoaded(true);
+    }
   }, [])
 
   if (error) {
