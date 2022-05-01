@@ -50,15 +50,16 @@ function App() {
 
             </Toolbar>
           </AppBar>
+          <LogoImg/>
+          <Typography  component="div" >
+            Enn
+          </Typography>
+          <LogoImg/>
+          <LogoImg/>
+          <LogoImg/>
+          <LogoImg/>
         </Box>
-        <LogoImg/>
-        <Typography  component="div" >
-          Enn
-        </Typography>
-        <LogoImg/>
-        <LogoImg/>
-        <LogoImg/>
-        <LogoImg/>
+
       </div>
     </ThemeProvider>
   );
