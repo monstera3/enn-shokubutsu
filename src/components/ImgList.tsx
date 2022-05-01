@@ -1,6 +1,6 @@
 import LogoImg from './LogoImg';
 import React, { useEffect, useState } from 'react';
-import { Box, ImageList, ImageListItem } from '@mui/material';
+import { Box, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import Config from '../config';
 
 type Error = { message: string }
@@ -58,13 +58,18 @@ export default function ImgList() {
   } else {
     return (
       <Box>
-        <ImageList sx={{ width: '100%' }} cols={1}>
+        <ImageList sx={{ width:'80%' }} cols={1}>
           {items.map((item => (
             <ImageListItem key={item.id}>
               <img
                 src={item.mediaUrl}
                 loading="lazy"
                 alt='img'/>
+              <ImageListItemBar
+                title={item.commentsCount}
+                subtitle={<span>by: {item.likeCount}</span>}
+                position="below"
+              />
             </ImageListItem>
           )))
           }
