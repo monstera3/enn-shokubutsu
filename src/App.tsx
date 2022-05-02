@@ -2,16 +2,12 @@ import React from 'react';
 import './App.css';
 import  ImgList,{ Item }  from './components/ImgList';
 import {
-  AppBar,
   Box,
   createTheme, CssBaseline,
-  IconButton,
   ThemeProvider,
-  Toolbar,
-  Typography
 } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Featured } from './components/Featured';
+import { HeaderBar } from './components/HeaderBar';
 
 const sampleTheme = createTheme({
   palette: {
@@ -35,23 +31,7 @@ const App = (props: {storedItems: Item[]})=> {
       <div className="App">
 
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="fixed" >
-            <Toolbar>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Enn
-              </Typography>
-              <IconButton
-                size="large"
-                edge="end"
-                color="inherit"
-                aria-label="menu"
-              >
-                <MenuIcon />
-              </IconButton>
-
-
-            </Toolbar>
-          </AppBar>
+          <HeaderBar/>
           <Featured/>
           <ImgList storedItems={props.storedItems}/>
         </Box>
