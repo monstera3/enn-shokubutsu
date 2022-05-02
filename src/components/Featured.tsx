@@ -7,7 +7,7 @@ export const Featured:FC =()=> {
 
   return (
     <div>
-      <Box pt={20} style={{ backgroundColor: theme.palette.primary.light}}>
+      <Box pt={2} style={{ backgroundColor: theme.palette.primary.light}}>
         <Typography  variant="h5" sx={{textAlign: 'center',fontWeight:'light'}}>
           Featured
         </Typography>

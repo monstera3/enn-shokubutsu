@@ -4,7 +4,7 @@ import  ImgList,{ Item }  from './components/ImgList';
 import {
   Box,
   createTheme, CssBaseline,
-  ThemeProvider,
+  ThemeProvider, Toolbar,
 } from '@mui/material';
 import { Featured } from './components/Featured';
 import { HeaderBar } from './components/HeaderBar';
@@ -32,6 +32,7 @@ const App = (props: {storedItems: Item[]})=> {
 
         <Box sx={{ flexGrow: 1 }}>
           <HeaderBar/>
+          <Toolbar />
           <Featured/>
           <ImgList storedItems={props.storedItems}/>
         </Box>
